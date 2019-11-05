@@ -21,11 +21,6 @@
   .main-nav .nav-right-block {
   	width: 10.1%;
   }
-  .main-nav:before {
-	width: calc(100% - 10.1%);
-	width: -webkit-calc(100% - 10.1%);
-	width: -moz-calc(100% - 10.1%);
-  }
   .block-stl12 {
   	padding: 80px 0px 20px 69px;
   }

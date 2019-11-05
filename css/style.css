@@ -904,9 +904,9 @@ h1.loader2 {
   height: 12px;
   bottom: -10px;
   z-index: 2;
-  width: calc(100% - 13.1%);
-  width: -webkit-calc(100% - 13.1%);
-  width: -moz-calc(100% - 13.1%);
+  /*width: calc(100% - 13.1%);*/
+  /*width: -webkit-calc(100% - 13.1%);*/
+  /*width: -moz-calc(100% - 13.1%);*/
   background-position: 3px !important;
 }
 .main-nav .logo {
@@ -6292,16 +6292,15 @@ line-height: 26px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 800px;
+  width: 900px;
   z-index: 10002;
 }
 
 .intro-block__item {
   position: relative;
   display: block;
-  width: 300px;
-  height: 200px;
-  overflow: hidden;
+  width: 400px;
+  height: 300px;
 }
 .intro-block__item h3 {
   position: relative;
@@ -6312,17 +6311,18 @@ line-height: 26px;
   color: yellow;
   background: #000;
   transition: all .4s;
-  transform: translateY(300px);
-  opacity: 0;
   z-index: 10003;
 }
 .intro-block__item img {
   position: relative;
+  width: 396px;
+  height: 285px;
+  border: 2px solid transparent;
+  transition: all .3s;
   z-index: 10004;
 }
-.intro-block__item:hover h3 {
-  transform: translateY(0);
-  opacity: 1;
+.intro-block__item:hover img{
+  border-color: yellow;
 }
 
 @media screen and (max-width: 850px) {

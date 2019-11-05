@@ -2,6 +2,22 @@
 /* Template Name: Главная */
 get_header();
 ?>
+
+    <div class="intro-block">
+        <div class="intro-block__overlay"></div>
+        <div class="intro-block__content">
+            <a href="#" class="intro-block__item intro_index">
+                <h3><?php echo get_field('phone_text' . get_lang(), 'option'); ?></h3>
+                <img src="<?php echo get_template_directory_uri() . '/images/intro-cropped.jpg'; ?>" alt="">
+            </a>
+
+            <a target="_blank" href="https://www.straus.md/ru/restaurant/pizzamania/" class="intro-block__item">
+                <h3><?php echo get_field('straus_text' . get_lang(), 'option'); ?></h3>
+                <img src="<?php echo get_template_directory_uri() . '/images/straus.jpg'; ?>" alt="">
+            </a>
+        </div>
+    </div>
+
 <?php
 //$section = get_field('section');
 ?>
@@ -27,7 +43,7 @@ if ($property->have_posts()) : ?>
                     <div class="item-slider2 owl-carousel owl-theme">
 						<?php while ($property->have_posts()) :
 							$property->the_post();
-							if(get_field('mainpage') == 'yes') {
+							if (get_field('mainpage') == 'yes') {
 								$section = get_field('section');
 								if ($section && in_array('new', $section)):?>
                                     <div class="item">
@@ -71,15 +87,15 @@ if ($property->have_posts()) : ?>
                     <div class="item-slider2 owl-carousel owl-theme">
 						<?php while ($property->have_posts()) :
 							$property->the_post();
-						if(get_field('mainpage') == 'yes') {
-							$section = get_field('section');
-							if ($section && in_array('popular', $section)):?>
-                                <div class="item">
-									<?php get_template_part('template-parts/tovar', 'shortstory'); ?>
-                                </div>
-							<?php
-							endif;
-                        }
+							if (get_field('mainpage') == 'yes') {
+								$section = get_field('section');
+								if ($section && in_array('popular', $section)):?>
+                                    <div class="item">
+										<?php get_template_part('template-parts/tovar', 'shortstory'); ?>
+                                    </div>
+								<?php
+								endif;
+							}
 						endwhile;
 						?>
                     </div>

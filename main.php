@@ -6,14 +6,19 @@ get_header();
     <div class="intro-block">
         <div class="intro-block__overlay"></div>
         <div class="intro-block__content">
-            <a href="#" class="intro-block__item intro_index">
-                <h3><?php echo get_field('phone_text' . get_lang(), 'option'); ?></h3>
+            <a target="_blank" href="https://www.straus.md/ru/restaurant/pizzamania/" class="intro-block__item">
+                <h3><?php echo get_field('phone_text_chishinau' . get_lang(), 'option'); ?></h3>
+                <img src="<?php echo get_template_directory_uri() . '/images/straus.jpg'; ?>" alt="">
+            </a>
+
+            <a href="tel:+37368900377" class="intro-block__item">
+                <h3><?php echo get_field('phone_text_balti' . get_lang(), 'option'); ?></h3>
                 <img src="<?php echo get_template_directory_uri() . '/images/intro-cropped.jpg'; ?>" alt="">
             </a>
 
-            <a target="_blank" href="https://www.straus.md/ru/restaurant/pizzamania/" class="intro-block__item">
-                <h3><?php echo get_field('straus_text' . get_lang(), 'option'); ?></h3>
-                <img src="<?php echo get_template_directory_uri() . '/images/straus.jpg'; ?>" alt="">
+            <a href="#" class="intro-block__item intro_index">
+                <h3><?php echo get_field('view_site' . get_lang(), 'option'); ?></h3>
+                <img src="<?php echo get_template_directory_uri() . '/images/intro-cropped.jpg'; ?>" alt="">
             </a>
         </div>
     </div>
